@@ -1243,8 +1243,10 @@
                                 accepted_terms: document.getElementById('accepted_terms').checked
                             };
 
+                            console.log(JSON.stringify(formData))
+
                             // API endpoint - replace with your actual endpoint
-                            const apiEndpoint = 'https://api.example.com/submit-consultation';
+                            const apiEndpoint = 'https://rotary-server-siq2.onrender.com/send-email';
 
                             // Send data to the endpoint
                             fetch(apiEndpoint, {
@@ -1255,6 +1257,7 @@
                                 body: JSON.stringify(formData)
                             })
                                 .then(response => {
+                                    
                                     if (!response.ok) {
                                         throw new Error('Network response was not ok');
                                     }
