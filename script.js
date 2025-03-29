@@ -33,10 +33,10 @@ function submitConsultationForm() {
     
 
     // API endpoint - replace with your actual endpoint
-    const apiEndpoint = 'http://localhost:3000/';
+    const apiEndpoint = 'https://rotary-server-siq2.onrender.com/send-email';
 
     // Send data to the endpoint
-    axios.get(apiEndpoint, formData, {
+    axios.post(apiEndpoint, formData, {
         headers: {
             'Content-Type': 'application/json',
         }
@@ -46,7 +46,7 @@ function submitConsultationForm() {
             document.getElementById('form-success-message').style.display = 'block';
 
             // Reset form
-            document.getElementById('consultation-form').reset();
+            // document.getElementById('consultation-form').reset();
 
             console.log(response)
         })
