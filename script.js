@@ -33,13 +33,12 @@ function submitConsultationForm() {
     
 
     // API endpoint - replace with your actual endpoint
-    const apiEndpoint = 'https://v0-next-api-email-server.vercel.app/api/send-email';
+    const apiEndpoint = 'http://localhost:3000/';
 
     // Send data to the endpoint
-    axios.post(apiEndpoint, formData, {
+    axios.get(apiEndpoint, formData, {
         headers: {
             'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*'
         }
     })
         .then(response => {
