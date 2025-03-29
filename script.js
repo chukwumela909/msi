@@ -30,9 +30,10 @@ function submitConsultationForm() {
     };
 
     console.log(JSON.stringify(formData))
+    
 
     // API endpoint - replace with your actual endpoint
-    const apiEndpoint = 'https://rotary-server-siq2.onrender.com/send-email';
+    const apiEndpoint = 'https://v0-next-api-email-server.vercel.app/api/send-email';
 
     // Send data to the endpoint
     axios.post(apiEndpoint, formData, {
